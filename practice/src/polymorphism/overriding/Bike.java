@@ -11,8 +11,8 @@ public class Bike extends Vehicle {
         System.out.println("Bike is running");
     }
     public static void main(String[] args) {
-        Bike obj = new Bike();
-        obj.run();
+       /* Bike obj = new Bike();
+        obj.run();*/
 
         Vehicle vehicle = new Vehicle();
         vehicle.run();
