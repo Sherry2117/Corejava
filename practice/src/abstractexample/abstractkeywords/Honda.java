@@ -1,13 +1,12 @@
-package abstractexample;
-
-import thisusage.constt.call.B;
+package abstractexample.abstractkeywords;
 
 abstract class Bike {
     abstract void run();
 }
 public class Honda extends Bike {
-    void run() {
-        System.out.println("running safely");
+
+    void run(){
+        System.out.println("Honda bike running safely");
     }
 
     public static void main(String[] args) {
