@@ -6,7 +6,6 @@ class A {
     }
 
     public static void main(String[] args) {
-        A a = new();
-        a.msg();
+
     }
 }
