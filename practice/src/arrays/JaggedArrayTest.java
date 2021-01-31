@@ -1,5 +1,7 @@
 package arrays;
 
+import static java.lang.System.*;
+
 public class JaggedArrayTest {
 
     public static void main(String[] args) {
