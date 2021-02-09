@@ -16,7 +16,7 @@ public class TestThreadPool {
         executor.shutdown();
         System.out.println("About to finish worker thread"+new Date());
         while (!executor.isTerminated()) {
-            System.out.println("Still waiting"+ new Date());
+            //System.out.println("Still waiting"+ new Date());
 
         }
         System.out.println("Finish all worker threads"+ new Date());
