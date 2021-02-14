@@ -13,6 +13,7 @@ class Table1 {
                 }catch (Exception e){
                     System.out.println(e);
                 }
+
             }
             System.out.println("Completed PrintTable");
 
