@@ -1,8 +1,8 @@
 package garbagecollection;
+class Addition {
 
-public class Addition {
     public int balance = 100;
-    synchronized void add(int n) {
+    synchronized void add(int n){
         this.balance = this.balance + n;
         System.out.println("My Balance is now :-" + this.balance);
     }
@@ -11,7 +11,7 @@ public class Addition {
 class MyThread3 extends Thread{
     Addition t;
     MyThread3(Addition t) {
-        this.t =t;
+        this.t = t;
     }
 
     @Override
@@ -40,5 +40,4 @@ class AddProblem {
         t1.start();
         t2.start();
     }
-
 }

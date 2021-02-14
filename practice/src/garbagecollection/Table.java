@@ -1,18 +1,17 @@
 package garbagecollection;
 
-public class Table {
+class Table {
     synchronized void printTable(int n) {
         System.out.println("printTable Started");
-        for (int i = 0; i<=5 ; i++) {
+        for(int i = 0; i <= 5 ; i++){
             System.out.println(n*i);
-            try {
+            try{
                 Thread.sleep(200);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
         System.out.println("printTable Ended");
-
     }
 }
 
@@ -48,6 +47,5 @@ class SyncProblem{
         t1.start();
         t2.start();
     }
+
 }
-
-
