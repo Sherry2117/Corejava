@@ -1,8 +1,18 @@
 package ObjectExamples;
 
+import java.util.Objects;
+
 public class Student implements Cloneable {
     int rollNo;
     String name;
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "rollNo=" + rollNo +
+                ", name='" + name + '\'' +
+                '}';
+    }
 
     public Student(int rollNo, String name) {
         this.rollNo = rollNo;
@@ -13,7 +23,20 @@ public class Student implements Cloneable {
         return super.clone();
     }
 
-        public static void main(String[]args){
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Student student = (Student) o;
+        return rollNo == student.rollNo && Objects.equals(name, student.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(rollNo, name);
+    }
+
+    public static void main(String[]args){
             try {
                 Student s1 = new Student(45, "Wahaj");
                 s1.name = "San1";
