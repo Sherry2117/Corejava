@@ -36,12 +36,15 @@ public class JavaStreamExample2 {
        //System.out.println(productPriceList1);
 
         productList.
-                   stream().filter(product1 -> product1.price == 3000)
-                .forEach(product1 -> System.out.println(product1.name));
+                   stream().
+                filter(product1 -> product1.price == 3000)
+                .forEach(product1 -> {
+                        System.out.println(product1.name);
+    });
 
         Float totalPrice = productList.stream()
                 .map(product -> product.price)
-                .reduce(0.0f, Float ::sum);
+                .reduce(1f, Float::sum);
         System.out.println("totalPrice ::" +totalPrice);
         //accumulating price by referring method of float class
 
